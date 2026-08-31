@@ -1,37 +1,344 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Estructura semántica HTML5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 4 - Novedades de HTML5</title>
+    <style>
+        /* Estilos CSS básicos integrados para presentación */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        main {
+            background-color: #ffffff;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        section {
+            margin-bottom: 35px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+
+        /* Estilos del Formulario */
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            background: #fdfdfd;
+            padding: 20px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group-full {
+            grid-column: span 2;
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #4a5568;
+        }
+
+        input {
+            padding: 8px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button[type="submit"] {
+            grid-column: span 2;
+            background-color: #2b6cb0;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #2c5282;
+        }
+
+        /* Elements auxiliares */
+        figure {
+            margin: 15px 0;
+            padding: 10px;
+            background: #f7fafc;
+            border: 1px solid #edf2f7;
+            border-radius: 6px;
+        }
+
+        figcaption {
+            font-size: 0.9em;
+            color: #718096;
+            margin-top: 5px;
+            font-style: italic;
+        }
+
+        aside {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 0 0 8px 8px;
+            font-size: 0.9em;
+        }
+
+        footer time {
+            font-weight: bold;
+            color: #1abc9c;
+        }
+
+        mark {
+            background-color: #fefcbf;
+            padding: 2px 4px;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>UNACH FCA, C1</h1>
+
+    <!-- 1. Encabezado semántico (header) y Menú de navegación (nav) con 4 hipervínculos internos -->
+    <header>
+        <h1>UNACH - HTML5</h1>
+        <p>UNIVERSIDAD AUTÓNOMA DE CHIAPAS - HTML5</p>
+    </header>
+
     <nav>
-      <a href="#">Inicio</a> |
-      <a href="#">Carreras</a> |
-      <a href="#">Nuestra Facultad</a> |
-      <a href="#">Contacto</a>
+        <a href="#introduccion">Inicio</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#formulario">Formulario</a>
+        <a href="#canvas">Canvas</a>
     </nav>
-  </header>
+    <!-- 2. Estructura Principal del cuerpo (main) -->
+    <main>
 
-  <main>
-    <section>
-      <h2>Última noticia</h2>
-      <article>
-        <h3>Apertura de inscripciones</h3>
-        <p>Publicado el <time datetime="2025-08-01">1 de agosto de 2025</time>.</p>
-        <p>Las inscripciones al ciclo 2025-B están abiertas...</p>
-      </article>
-    </section>
-    <aside>
-      <h3>Avisos</h3>
-      <p>Mantenimiento programado el viernes.</p>
-    </aside>
-  </main>
+        <!-- Sección de Introducción: Uso de section, article, time y mark -->
+        <section id="introduccion">
+    <article>
+        <!-- Tabla nativa HTML para crear 2 columnas -->
+        <table border="0" width="100%" cellpadding="10">
+            <tr>
+                <!-- Columna Izquierda: Texto -->
+                <td width="70%" valign="top">
+                    <h2>PRÁCTICA 4. ¿QUÉ ES HTML5?</h2>
+                    <p>
+                        <mark>HTML5</mark> es la quinta y más reciente gran versión de HTML, el lenguaje de marcado estándar utilizado 
+                        para estructurar y presentar todo el contenido en la World Wide Web. Funciona como el "plano arquitectónico" o 
+                        el esqueleto de un sitio web, indicándole al navegador cómo debe organizar elementos como textos, imágenes, formularios y contenido multimedia.
+                    </p>
+                    <p>
+                        <time datetime="2026-08-31">31 de Agosto de 2026</time>
+                    </p>
+                </td>
+                
+                <!-- Columna Derecha: Imagen -->
+                <td width="30%" align="center" valign="middle">
+                    <figure>
+                        <img src="imagenes/image.png" alt="Logotipo de HTML5" width="320" height="200">
+                    </figure>
+                </td>
+            </tr>
+        </table>
+    </article>
+</section>
 
-  <footer>
-    <p>UNACH &copy; 2025 — Tuxtla Gutiérrez, Chiapas</p>
-  </footer>
+        <!-- 3. Sección Multimedia: audio y video con múltiples fuentes, poster y figure/figcaption -->
+       <section id="multimedia">
+    <h2>Multimedia en HTML5</h2>
+    
+    <!-- Audio de prueba en línea -->
+    <figure>
+        <h3>Reproducción de Audio</h3>
+        <audio controls preload="metadata">
+            <source src="audio/cancion.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio HTML5.
+        </audio>
+    </figure>
+
+    <!-- Video de prueba en línea -->
+    <figure>
+        <h3>Reproducción de Video</h3>
+        <video controls width="500" preload="metadata">
+            <source src="Practica4/video/v.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video HTML5.
+        </video>
+    </figure>
+</section>
+
+        <!-- 4. Sección Formulario: 8 tipos de entrada (email, url, number, range, date, color, tel, search) + datalist (5 opciones) + progress -->
+        <section id="formulario">
+            <h2>Formulario Avanzado</h2>
+            <form action="#" method="post">
+                
+                <div class="form-group">
+                    <label for="email">1. Correo Electrónico (email):</label>
+                    <input type="email" id="email" name="email" placeholder="alumno@unach.mx" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="sitio_web">2. Sitio Web Personal (url):</label>
+                    <input type="url" id="sitio_web" name="sitio_web" placeholder="https://misitio.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edad">3. Edad (number):</label>
+                    <input type="number" id="edad" name="edad" min="17" max="99" step="1" placeholder="Ej. 20" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="satisfaccion">4. Nivel de Satisfacción (range):</label>
+                    <input type="range" id="satisfaccion" name="satisfaccion" min="1" max="100" value="80">
+                </div>
+
+                <div class="form-group">
+                    <label for="fecha_nacimiento">5. Fecha de Nacimiento (date):</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="color_favorito">6. Color Favorito (color):</label>
+                    <input type="color" id="color_favorito" name="color_favorito" value="#2b6cb0">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">7. Teléfono (tel):</label>
+                    <input type="tel" id="telefono" name="telefono" placeholder="9611234567" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="busqueda">8. Buscar Tema (search + datalist):</label>
+                    <input type="search" id="busqueda" name="busqueda" list="temas_list" placeholder="Selecciona un tema...">
+                    
+                    <!-- datalist con al menos 5 opciones -->
+                    <datalist id="temas_list">
+                        <option value="Etiquetas Semánticas">
+                        <option value="Elementos Multimedia">
+                        <option value="Formularios Avanzados">
+                        <option value="Lienzo Canvas 2D">
+                        <option value="APIs de HTML5">
+                    </datalist>
+                </div>
+
+                <div class="form-group-full">
+                    <label for="progreso_curso">Avance del Curso (progress):</label>
+                    <progress id="progreso_curso" value="75" max="100">75%</progress>
+                </div>
+
+                <button type="submit">Enviar Datos</button>
+            </form>
+        </section>
+
+        <!-- 5. Sección Canvas: Dimensiones de 500x200 px -->
+        <section id="canvas">
+            <h2>Elemento Canvas (Gráficos 2D)</h2>
+            <canvas id="miLienzo" width="500" height="200" style="border: 1px solid #cbd5e0; border-radius: 4px;">
+                Tu navegador no soporta el elemento canvas.
+            </canvas>
+        </section>
+
+        <!-- 6. Información Adicional (aside) con details y summary -->
+        <aside>
+            <details>
+                <summary><strong>¿Qué ventajas ofrece el estándar HTML5?</strong> (Haz clic aquí)</summary>
+                <p>
+                    Permite construir aplicaciones web modernas sin necesidad de complementos externos (como Flash), 
+                    mejora el rendimiento en dispositivos móviles y estandariza las APIs del navegador.
+                </p>
+            </details>
+        </aside>
+
+    </main>
+
+    <!-- 7. Pie de Página (footer) -->
+    <footer>
+        <p>
+            Elaborado por: <strong>Tu Nombre Completo</strong> | Carrera: Licenciatura en Sistemas Computacionales (LSC)<br>
+            Materia: Programación de Aplicaciones Web | Práctica No. 4<br>
+            Fecha de elaboración: <time datetime="2026-08-30">30 de agosto de 2026</time>
+        </p>
+    </footer>
+
+    <!-- 8. Script para dibujar en Canvas (3 figuras: rectángulo, texto y círculo) -->
+    <script>
+        const canvas = document.getElementById('miLienzo');
+        const ctx = canvas.getContext('2d');
+
+        // Figura 1: Rectángulo Relleno
+        ctx.fillStyle = '#2b6cb0';
+        ctx.fillRect(30, 40, 160, 100);
+        ctx.strokeStyle = '#1a365d';
+        ctx.lineWidth = 3;
+        ctx.strokeRect(30, 40, 160, 100);
+
+        // Figura 2: Círculo
+        ctx.beginPath();
+        ctx.arc(380, 90, 50, 0, Math.PI * 2, false);
+        ctx.fillStyle = '#e53e3e';
+        ctx.fill();
+        ctx.strokeStyle = '#9b2c2c';
+        ctx.lineWidth = 4;
+        ctx.stroke();
+
+        // Figura 3: Texto renderizado en el Canvas
+        ctx.fillStyle = '#ffffff';
+        ctx.font = 'bold 16px Arial';
+        ctx.fillText('HTML5 Canvas', 45, 95);
+    </script>
 </body>
 </html>

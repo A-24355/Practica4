@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Práctica 4 - Novedades de HTML5</title>
     <style>
-        /* Estilos CSS básicos integrados para presentación */
+
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
         body {
             font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,11 +19,11 @@
         }
 
         header {
-            background-image: url('imagenes/bi.jpg'); /* Cambia 'banner.jpg' por el nombre de tu archivo */
-            background-size: cover;       /* Ajusta la imagen para cubrir todo el contenedor */
-            background-position: center;  /* Centra la imagen */
-            color: #ffffff;               /* Color del texto sobre la imagen */
-            padding: 30px 20px;           /* Altura/espaciado interno */
+            background-image: url('imagenes/bi.jpg');
+            background-size: cover;      
+            background-position: center; 
+            color: #ffffff;             
+            padding: 30px 20px;         
             text-align: center;
             border-radius: 8px 8px 0 0;
 }
@@ -65,7 +65,6 @@
             color: #000000;
         }
 
-        /* Estilos del Formulario */
         form {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -116,7 +115,6 @@
             background-color: #3182ce;
         }
 
-        /* Elementos auxiliares */
         figure {
             margin: 15px 0;
             padding: 10px;
@@ -164,7 +162,7 @@
 </head>
 <body>
 
-    <!-- 1. Encabezado semántico y Menú de navegación -->
+    <!-- Encabezado y navegación -->
     <header>
         <h1>UNACH - HTML5</h1>
         <p><b>UNIVERSIDAD AUTÓNOMA DE CHIAPAS - HTML5</b></p>
@@ -177,10 +175,10 @@
         <a href="#canvas">Canvas</a>
     </nav>
 
-    <!-- 2. Estructura Principal -->
+    <!-- Estructura -->
     <main>
 
-        <!-- Sección de Introducción -->
+        <!-- Intro-->
         <section id="introduccion">
             <article>
                 <table border="0" width="100%" cellpadding="5">
@@ -208,13 +206,13 @@
             </article>
         </section>
 
-        <!-- 3. Sección Multimedia <code>&lt;audio&gt;</code> -->
+        <!-- Multimedia <code>&lt;audio&gt;</code> -->
         <section id="multimedia">
             <h2>MULTIMEDIA</h2>
             
             <figure>
                 <h3>REPRODUCCIÓN DE AUDIO</h3>
-                <p style="font-size: 13px;">Se realiza de forma nativa mediante la etiqueta <code>&lt;audio&gt;</code>. Esto significa que los navegadores modernos pueden reproducir archivos de sonido directamente sin necesidad de instalar extensiones o programas adicionales</p>
+                <p style="font-size: 13px;">Se realiza de forma nativa mediante la etiqueta <code>&lt;audio&gt;</code>. Esto significa que los navegadores modernos pueden reproducir archivos de sonido directamente sin necesidad de instalar extensiones o programas adicionales. (A continuación, una demostración con una canción. Carpenters, Close to you)</p>
                 <audio controls preload="auto">
                     <source src="./audio/cancion.mp3" type="audio/mpeg">
                     Tu navegador no soporta el elemento de audio HTML5.
@@ -224,7 +222,7 @@
             <figure>
                 <h3>REPRODUCCIÓN DE VIDEO</h3>
                 <p style="font-size: 13px;">Al igual que con el audio, no requiere ningún complemento externo y funciona directamente en computadoras, tabletas y teléfonos celulares.
-                La reproducción de video en HTML5 se realiza de forma nativa a través de la etiqueta <code>&lt;video&gt;</code>.
+                La reproducción de video en HTML5 se realiza de forma nativa a través de la etiqueta <code>&lt;video&gt;</code>. (Y ahora un video relacionado al tema)
                 </p>
                 <video controls width="500" preload="auto">
                     <source src="./video/v.mp4" type="video/mp4">
@@ -233,7 +231,7 @@
             </figure>
         </section>
 
-        <!-- 4. Sección Formulario -->
+        <!-- Sección Formulario -->
         <section id="formulario">
             <h2>FORMULARIOS</h2>
             <p style="font-size: 13px;">Los formularios en HTML5 sufrieron una auténtica revolución. Antes, validar si un usuario escribía bien su correo o poner un calendario requería 
@@ -279,7 +277,7 @@
                     <label for="busqueda">Buscar Tema (search + datalist):</label>
                     <input type="search" id="busqueda" name="busqueda" list="temas_list" placeholder="Selecciona un tema...">
                     
-                    <!-- datalist con al menos 5 opciones -->
+                    <!-- datalist con 5 opciones -->
                     <datalist id="temas_list">
                         <option value="Etiquetas Semánticas"></option>
                         <option value="Elementos Multimedia"></option>
@@ -298,7 +296,7 @@
             </form>
         </section>
 
-        <!-- 5. Sección Canvas -->
+        <!-- Canvas -->
         <section id="canvas">
             <h2>Elemento Canvas (Gráficos 2D)</h2>
             <canvas id="miLienzo" width="500" height="200" style="border: 1px solid #cbd5e0; border-radius: 4px;">
@@ -306,7 +304,7 @@
             </canvas>
         </section>
 
-        <!-- 6. Información Adicional -->
+        <!-- Información Adicional -->
         <aside>
             <details>
                 <summary><strong>CLICK AQUÍ</strong></summary>
@@ -325,7 +323,7 @@
 
     </main>
 
-    <!-- 7. Pie de Página -->
+    <!-- Pie de Página -->
     <footer>
         <p>
             <strong>Karol Alberto Galdámez Gómez</strong> | Licenciatura en Sistemas Computacionales (LSC)<br>
@@ -334,7 +332,7 @@
         </p>
     </footer>
 
-    <!-- 8. Script Canvas -->
+    <!-- Script Canvas -->
     <script>
         const canvas = document.getElementById('miLienzo');
         const ctx = canvas.getContext('2d');
